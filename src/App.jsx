@@ -1,7 +1,11 @@
-import { useState } from 'react'
-import './App.css'
+import NumberGrid from "./NumberGrid"; // Import the component
 
 function App() {
+    return (
+        <div>
+            <NumberGrid />
+        </div>
+    );
 }
 
-export default App
+export default App;
