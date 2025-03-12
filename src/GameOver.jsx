@@ -10,7 +10,7 @@ export default function GameOver({ timer }) {
     return (
         <div className="game-over">
             <h2>Game Over!</h2>
-            <p>Time taken: {formatTime(timer)} seconds</p>
+            <p>Time Elapsed: {formatTime(timer)} seconds</p>
         </div>
     );
 }
