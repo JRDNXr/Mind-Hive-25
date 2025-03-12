@@ -1,16 +1,6 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #071038;
 }
 
 /* Centers the grid in the middle of the screen */
@@ -25,8 +15,8 @@
 /* Creates a 5x5 grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 60px);
-  grid-template-rows: repeat(5, 60px);
+  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: repeat(5, 70px);
   gap: 10px;
 }
 
@@ -42,7 +32,7 @@
   color: white;
   font-family: 'Roboto', sans-serif;
   /* Apply the font here */
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 8px;
 }
