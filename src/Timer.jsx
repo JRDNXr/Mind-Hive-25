@@ -1,4 +1,3 @@
-// Timer.jsx
 import React from "react";
 
 export default function Timer({ timer, clickedNumber }) {
