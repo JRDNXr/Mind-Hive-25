@@ -4,7 +4,7 @@ export default function NumberGrid() {
     const [numbers, setNumbers] = useState([]); // Holds the shuffled numbers
     const [clickedNumber, setClickedNumber] = useState(1); // Start from number 1
     const [gameStarted, setGameStarted] = useState(false); // To track if game started
-    const [timer, setTimer] = useState(0); // Timer to track how long it takes
+    const [timer, setTimer] = useState(0); // Timer to track how long it takes (in milliseconds)
     const [gameOver, setGameOver] = useState(false); // Game over flag
     const [startTime, setStartTime] = useState(null); // To track start time of the game
 
@@ -19,8 +19,8 @@ export default function NumberGrid() {
         let interval;
         if (gameStarted && !gameOver) {
             interval = setInterval(() => {
-                setTimer((prevTime) => prevTime + 1);
-            }, 1000);
+                setTimer((prevTime) => prevTime + 10); // Increase timer by 10 ms
+            }, 10); // Update every 10 milliseconds
         }
         return () => clearInterval(interval);
     }, [gameStarted, gameOver]);
@@ -47,6 +47,13 @@ export default function NumberGrid() {
         setTimer(0); // Reset timer
     };
 
+    // Format timer to display in seconds and milliseconds
+    const formatTime = (timeInMs) => {
+        const seconds = Math.floor(timeInMs / 1000);
+        const milliseconds = timeInMs % 1000;
+        return `${seconds}.${milliseconds.toString().padStart(3, "0")}`; // Format like "2.150"
+    };
+
     return (
         <div className="game-container">
             <h1>Click the Numbers in Ascending Order!</h1>
@@ -60,7 +67,7 @@ export default function NumberGrid() {
             {gameOver && (
                 <div className="game-over">
                     <h2>Game Over!</h2>
-                    <p>Time taken: {timer} seconds</p>
+                    <p>Time taken: {formatTime(timer)} seconds</p>
                 </div>
             )}
 
@@ -80,7 +87,7 @@ export default function NumberGrid() {
 
             {gameStarted && !gameOver && (
                 <div className="timer">
-                    <p>Time: {timer} seconds</p>
+                    <p>Time: {formatTime(timer)} seconds</p>
                     <p>Click Number: {clickedNumber}</p> {/* Display the number the user needs to find */}
                 </div>
             )}
