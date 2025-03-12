@@ -1,4 +1,3 @@
-// NumberGrid.jsx
 import React from "react";
 
 export default function NumberGrid({ numbers, clickedNumber, handleClick }) {
@@ -9,7 +8,7 @@ export default function NumberGrid({ numbers, clickedNumber, handleClick }) {
                     <button
                         key={num}
                         className="grid-item"
-                        onClick={() => handleClick(num)} // All buttons are clickable
+                        onClick={() => handleClick(num)}
                     >
                         {num}
                     </button>
