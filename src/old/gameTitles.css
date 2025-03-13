@@ -1,0 +1,28 @@
+/* This CSS file handles all of the game start buttons. */
+
+.game-btns-container {
+    padding-top: 35px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brain-img {
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.rocket-img {
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.brain-img:hover,
+.rocket-img:hover {
+    transform: scale(1.1);
+}

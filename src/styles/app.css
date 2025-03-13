@@ -3,5 +3,83 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 equal columns */
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    /* Ensure grid does not exceed screen size */
+    width: 100%;
+}
+
+.grid-item {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    /* Nice blue: 4f85a1 */
+    color: white;
+    border: 2px solid #dfe5e7;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    /* Adjust padding for better button size */
+    transition: background-color 0.3s;
+    border-radius: 12px;
+    /* More rounded corners */
+    box-sizing: border-box;
+}
+
+.grid-item.clicked {
+    background-color: lightgreen;
+    cursor: not-allowed;
+}
+
+.grid-item:disabled {
+    background-color: gray;
+}
+
+.grid-item:hover {
+    background-color: deepskyblue;
+}
+
+.game-over {
+    margin-top: 20px;
+}
+
+.game-over h2 {
+    font-size: 2rem;
+}
+
+.game-over p {
+    font-size: 1.2rem;
+}
+
+.rocket-img {
+    padding-top: 25px;
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.content-timer {
+    font-size: 100px;
 }
