@@ -4,7 +4,7 @@ export default function GridLayout() {
     return (
         <div className="grid">
             {[...Array(25)].map((_, i) => (
-                <div key={i} className="cell"></div>
+                <div key={i} className="game-title-btns"></div>
             ))}
         </div>
     );
