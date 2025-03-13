@@ -6,7 +6,6 @@
     grid-template-columns: repeat(5, 60px);
     grid-template-rows: repeat(5, 60px);
     gap: 12px;
-    margin-top: 30px;
 }
 
 .game-title-btns {
